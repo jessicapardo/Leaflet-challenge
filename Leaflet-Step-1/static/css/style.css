@@ -12,6 +12,9 @@ html {
 .legend {
   line-height: 18px;
   color: #555;
+  background-color: rgba(215, 224, 222, 0.795);
+  padding: 10px;
+
 }
 .legend i {
   width: 18px;

@@ -3,11 +3,11 @@ let url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.ge
 
 
 // Define markerSize ratio
-
 function markerSize(mag) {
     return mag * 3;
 }
 
+// Define markerColor
 function markerColor(magnitude) {
     if (magnitude <= 1) {
         return "#E6DCE9";
@@ -69,13 +69,6 @@ function createMap(earthquake) {
         accessToken: API_KEY
     });
 
-
-
-    // // Create a baseMaps object to hold the lightmap layer
-    // let baseMaps = {
-    //     'Light Map': lightMap
-    // };
-
     // Create overlay object to hold our overlay layer
     let overLays = {
         Earthquakes: earthquake
@@ -88,20 +81,17 @@ function createMap(earthquake) {
         layers: [lightMap, earthquake]
     });
 
-    // // Control layer
-    // L.control.layers(baseMaps, overLays, {
-    //     collapsed: false
-    // }).addTo(myMap);
-
-
     // Adding legend and correspondant details
-    var legend = L.control({ position: 'bottomright' });
+    let legend = L.control({ position: 'bottomright' });
 
     legend.onAdd = function () {
 
-        var div = L.DomUtil.create('div', 'info legend');
-        var magnitudes = [0, 1, 2, 3, 4, 5];
-        var colors = ["#E6DCE9", "#63ADF2", "#66FFBF", "#3DFF57", "#F5F500", "#FF0000"];
+        let div = L.DomUtil.create('div', 'info legend');
+        let magnitudes = [0, 1, 2, 3, 4, 5];
+        let colors = ["#E6DCE9", "#63ADF2", "#66FFBF", "#3DFF57", "#F5F500", "#FF0000"];
+
+        //Legend Label Earthquake <break> Magnitude  
+        div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
 
         for (var i = 0; i < magnitudes.length; i++) {
             div.innerHTML +=
@@ -120,4 +110,4 @@ function createMap(earthquake) {
 
     legend.addTo(myMap);
 
-}
+};
