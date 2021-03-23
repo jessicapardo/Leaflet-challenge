@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Earthquakes Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- jQuery library -->
+<!-- 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="Leaflet-Step-1/static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="Leaflet-Step-2/static/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href=" index.html "><span class="navbar-brand mb-0 h1 back_color ">Earthquakes
+        Dashboard</span></a>
+
+    <ul class="nav nav-pills ">
+      <li class="nav-item ">
+        <a class="nav-link active " href="Leaflet-Step-1/index.html ">Earthquakes- Basic Visualization</a>
+      </li>
+      <br>
+      <li class="nav-item ">
+        <a class="nav-link active " href="Leaflet-Step-2/index.html ">Earthquakes with Layers - Advanced
+          Visualization</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid ">
+    <div class="jumbotron text-center ">
+
+      <h1>World Earthquakes</h1>
+
+    </div>
+    <div class="row ">
+      <div class="col-lg-6 ">
+        <h5> Latest Earthquakes Map</h5>
+        <h6>(Click on the map)</h6>
+        <br />
+        <a href="Leaflet-Step-1/index.html "><img src="Images/basic_map.png " alt="Mapping without Layers " width="800 "
+            height="450 " /></a>
+      </div>
+      <div class="col-lg-6 ">
+        <h5>Relationship Between Tectonic Plates and Seismic Activity Map</h5>
+        <h6>(Click on the map)</h6>
+        <br />
+        <a href="Leaflet-Step-2/index.html ">
+          <img src="Images/advanced_map.png " alt="Mapping with Layers " width="800" height="450 " /></a>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <!-- D3 JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+    <!-- API key Leaflet-Step-1-->
+    <!-- API Key -->
+    <script type="text/javascript" src="Leaflet-Step-1/static/js/config.js"></script>
+
+
+
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="Leaflet-Step-1/static/js/logic.js"></script>
+    <script type="text/javascript" src="Leaflet-Step-2/static/js/logic.js"></script>
+
+</body>
+
+
+<div id="footer">
+  <p>Data provided by United States Geological Survey (USGS) </p>
+</div>
+
+
+</html>
