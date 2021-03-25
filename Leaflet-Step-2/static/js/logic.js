@@ -39,7 +39,7 @@ function createMyFeatures(data) {
 
         onEachFeature: function (feature, layer) {
             layer.bindPopup("<p><h3>Location: " + feature.properties.place +
-                "</h3><hr><p>" + "<p/>" + new Date(feature.properties.time) + "<br><p><h3>Magnitude: " + feature.properties.magnitude + "</h3></p>");
+                "</h3><hr><p>" + "<p/>" + new Date(feature.properties.time) + "<br><p><h3>Magnitude: " + feature.properties.mag + "</h3></p>");
         },
 
         pointToLayer: function (feature, latlng) {
